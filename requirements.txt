@@ -3,4 +3,4 @@ pillow
 numpy
 easyocr
 opencv-python-headless
-torch-cpu  # CPU-only version of PyTorch
+torch  # Use the latest compatible version that supports CPU
