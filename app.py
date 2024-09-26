@@ -1,6 +1,10 @@
 import streamlit as st
 from PIL import Image
 import easyocr
+reader = easyocr.Reader(['en', 'hi'])  # Downloads model for English and Hindi
+
+# Rest of your OCR or detection code here
+
 import numpy as np
 import re
 import json
