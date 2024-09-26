@@ -1,16 +1,12 @@
 import streamlit as st
 from PIL import Image
 import easyocr
-reader = easyocr.Reader(['en', 'hi'])  # Downloads model for English and Hindi
-
-# Rest of your OCR or detection code here
-
 import numpy as np
 import re
 import json
 
-# Initialize the EasyOCR reader
-reader = easyocr.Reader(['en', 'hi'])  # You can specify the languages you need
+# Initialize the EasyOCR reader without GPU (CUDA/MPS)
+reader = easyocr.Reader(['en', 'hi'], gpu=False)  # Disable GPU by setting gpu=False
 
 # OCR function using EasyOCR
 def extract_text(image):
