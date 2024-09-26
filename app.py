@@ -6,7 +6,8 @@ import re
 import json
 
 # Initialize the EasyOCR reader 
-reader = easyocr.Reader(['en', 'hi']) 
+reader = easyocr.Reader(['en', 'hi'])  # CPU will be used by default
+
 
 # OCR function using EasyOCR
 def extract_text(image):
