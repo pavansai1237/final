@@ -5,8 +5,8 @@ import numpy as np
 import re
 import json
 
-# Initialize the EasyOCR reader without GPU (CUDA/MPS)
-reader = easyocr.Reader(['en', 'hi'], gpu=False)  # Disable GPU by setting gpu=False
+# Initialize the EasyOCR reader explicitly for CPU use only (no GPU, CUDA, or MPS)
+reader = easyocr.Reader(['en', 'hi'], gpu=False)  # Ensure no GPU usage by setting gpu=False
 
 # OCR function using EasyOCR
 def extract_text(image):
